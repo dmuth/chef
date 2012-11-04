@@ -20,3 +20,13 @@
 package "screen" do
   action :install
 end
+
+#
+# Include our .screenrc file.
+#
+template "/home/vagrant/.screenrc" do
+	source "screenrc.erb"
+	owner "vagrant"
+	group "vagrant"
+end
+
